@@ -1,7 +1,5 @@
 import numpy as np
 import random
-from constants import N
-
 
 def generate_population(pop_size: int, N: int, u_max: float) -> np.ndarray:
     return np.random.uniform(low = 0.0,high= u_max,size = (pop_size,N))
@@ -34,8 +32,6 @@ def gaussian_mutation(individual: np.ndarray, mutation_rate: float, sigma: float
     subj_copy[mask] += noise[mask]
 
     return np.clip(subj_copy,0.0,u_max)
-
-
 
 def new_generation(population: np.ndarray, fitnesses: np.ndarray, u_max: float, mutation_rate: float, sigma: float, tournament_size: int) -> np.ndarray:
     pop_size, N = population.shape
