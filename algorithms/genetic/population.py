@@ -1,3 +1,7 @@
+"""
+Population management for the genetic algorithm.
+"""
+
 import numpy as np
 import random
 

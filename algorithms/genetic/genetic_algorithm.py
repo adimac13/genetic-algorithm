@@ -1,7 +1,11 @@
+"""
+Genetic Algorithm implementation.
+"""
+
 from dataclasses import dataclass, field
 import numpy as np
 from constants import u_max
-from population import generate_population, new_generation
+from algorithms.genetic.population import generate_population, new_generation
 
 
 @dataclass

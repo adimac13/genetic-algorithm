@@ -1,6 +1,10 @@
+"""
+Script for testing different genetic algorithm parameters.
+"""
+
 import itertools
-from geneticalgorithm import run, GAParams
-from fitness import fitness, repair, fine,trajectory
+from algorithms.genetic.genetic_algorithm import run, GAParams
+from algorithms.genetic.fitness import fitness, repair, fine,trajectory
 from dataclasses import replace
 import numpy as np
 import csv

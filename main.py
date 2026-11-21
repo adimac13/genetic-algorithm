@@ -1,6 +1,10 @@
-from algorithm import optimize_with_scipy
-from geneticalgorithm import run, GAParams
-from fitness import fitness, repair, trajectory
+"""
+Main script for running and comparing SciPy and Genetic Algorithm optimizations.
+"""
+
+from algorithms.scipy.scipy_algorithm import optimize_with_scipy
+from algorithms.genetic.genetic_algorithm import run, GAParams
+from algorithms.genetic.fitness import fitness, repair, trajectory
 from constants import N_values
 import numpy as np
 import matplotlib.pyplot as plt
@@ -47,7 +51,7 @@ if __name__ == "__main__":
 
         axes[2].plot(history_best_fitness_ga,   'b--', label="Best Fitness GA")
         axes[2].plot(history_mean_fitness_ga, 'r--', label="Mean Fitness GA")
-        axes[2].plot(history_worst_fitness_ga,'g--', label="Worst Fitness GA")
+        # axes[2].plot(history_worst_fitness_ga,'g--', label="Worst Fitness GA")
         axes[2].legend()
         axes[2].set_ylabel("Fitness")
         axes[2].set_xlabel("Generation")

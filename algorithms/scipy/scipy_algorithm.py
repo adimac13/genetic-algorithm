@@ -1,3 +1,7 @@
+"""
+SciPy-based optimization implementation.
+"""
+
 import numpy as np
 from constants import a, x0, u_max
 from scipy.optimize import minimize
@@ -21,7 +25,6 @@ def optimize_with_scipy(N: int) -> np.ndarray:
     result = minimize(fun, U0, bounds = [(0, u_max) for _ in range(N)], constraints=
                       [
                           {'type': 'eq', 'fun': lambda U: evaluate(U)[1][-1] - x0 },
-                          {'type': 'ineq', 'fun': lambda U: min(evaluate(U)[1]) }
                           ], 
                       method='SLSQP', tol=1e-6)
     return result.x

@@ -1,3 +1,7 @@
+"""
+Fitness functions and trajectory handling for the genetic algorithm.
+"""
+
 import numpy as np
 from constants import a, x0, u_max
 
